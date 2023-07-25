@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: nestjs_mysql_tutorial_mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: testuser123
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testuser123
+      MYSQL_DATABASE: nestjs_mysql_tutorial
+    volumes:
+      - ./data:/var/lib/mysql
